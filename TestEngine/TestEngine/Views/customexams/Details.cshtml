@@ -1,0 +1,490 @@
+﻿@model TestEngine.DataBase.customexam
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>customexam</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.examname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.examname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.catid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.catid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.syllabus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.syllabus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prerequisites)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prerequisites)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.partner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.partner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ibillproductid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ibillproductid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.psproductid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.psproductid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.comments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.comments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.logo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.logo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.duration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.duration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.questioncount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.questioncount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.offline)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.offline)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.randomtest)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.randomtest)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pagename)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pagename)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.usepage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.usepage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.printname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.printname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.resultpage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.resultpage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.transcriptpage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.transcriptpage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.showcorporate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.showcorporate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.courseware)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.courseware)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.coursepath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.coursepath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.productId2CO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.productId2CO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.priority)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.priority)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.positioning)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.positioning)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.directions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.directions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.haspassage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.haspassage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.passagenum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.passagenum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.positive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.positive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.odeskexam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.odeskexam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.recertification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.recertification)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isbeta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isbeta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.uploaddate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.uploaddate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.passingmarks)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.passingmarks)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.examlanguage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.examlanguage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.masterexamid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.masterexamid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.refid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.refid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.refid1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.refid1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.foreignexamid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.foreignexamid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.elmlxmlname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.elmlxmlname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isfn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isfn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.examenablepartners)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.examenablepartners)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.commoncodelive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.commoncodelive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isCronbach)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isCronbach)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobTitleID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobTitleID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.masterXmlfile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.masterXmlfile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SurCatPageUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SurCatPageUrl)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.addedby)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.addedby)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isfreezed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isfreezed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isfrree)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isfrree)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.addedbytest)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.addedbytest)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.flagged)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.flagged)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.flagerror)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.flagerror)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.flagged1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.flagged1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.showendbtn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.showendbtn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idset)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idset)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isidset)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isidset)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.languagetype)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.languagetype)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.languagetype1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.languagetype1)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.examid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

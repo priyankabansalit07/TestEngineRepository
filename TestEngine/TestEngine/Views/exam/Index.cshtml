@@ -1,0 +1,544 @@
+﻿
+@{
+    ViewBag.Title = "Exam Page";
+}
+
+@using TestEngnie.Models.Models
+@model SectionIntroModel
+
+@{ 
+    var language = Model.lang;
+}
+
+<html>
+<head>
+    <title>
+
+    </title>
+</head>
+<body id="pagebody">
+    <form id="form1">
+
+        <div id="resultLoading" style="display: none;">
+            <div>
+                <img style="width: auto; height: auto;" src="images/ajax-loader.gif"><div>
+                    <br />
+
+                    @language.subresponse1
+                        <br />
+                            @language.subresponse2
+                </div>
+            </div>
+            <div class="bg"></div>
+        </div>
+
+        <div id="resultLoading1">
+            <div>
+                <img style="width: auto; height: auto;" src="images/ajax-loader.gif"><div>
+                    <br />
+
+                    @language.subload1<br />
+                        <br />
+                        @language.subload2
+                </div>
+            </div>
+            <div class="bg"></div>
+        </div>
+        <div id="resultLoading2" style="display: none;">
+            <div>
+                <span style="color: red; font-size: 25px;"></span>
+                <br />
+
+                <img style="width: auto; height: auto;" src="images/loadingarrow.gif"><div>
+                   @language.subconissue1
+                        <br />
+                        @language.subconissue2
+                    <br />
+                    <br />
+                    <span style="display: none; font-size: 20px;">
+                        Attempt
+                        <span style="color: red;">
+                            <label id="connectlabel">0</label>
+                        </span>
+                        of 10.
+                    </span>
+
+                </div>
+            </div>
+            <div class="bg"></div>
+        </div>
+
+
+
+        <div class="popup_endtask">
+
+
+            <div id="popup" class="modal-box">
+                <header>
+                    <a href="#" class="js-modal-close close">×</a>
+                    <h3>@language.subconfirmhead </h3>
+                </header>
+                <div class="modal-body">
+                    <p>@language.subconfirmtest </p>
+                </div>
+                <footer><a href="javascript:void(0);" onclick="engineupdate('1','1','true','false','0','2','false','0');" class="" id="yes_confirm">@language.subyes</a> <a href="javascript:void(0);" class="js-modal-close" id="no_confirm">@language.subno</a> </footer>
+            </div>
+
+        </div>
+        <div class="popup_endtask">
+
+            <div id="endpopup" class="modal-box">
+                <header>
+                    <a href="#" class="js-modal-close close">×</a>
+                    <h3>@language.subconfirmhead</h3>
+                </header>
+                <div class="modal-body">
+                    <p>@language.subconfirmtest</p>
+                </div>
+                <footer><a href="javascript:void(0);" onclick="engineupdate('1','1','true','false','0','1','false','0');" class="" id="yes_confirm">@language.subyes </a> <a href="javascript:void(0);" class="js-modal-close" id="no_confirm">@language.subno</a> </footer>
+            </div>
+
+        </div>
+        <div class="popup_endtask">
+
+            <div id="timeoutdiv" class="modal-box">
+                <header>
+
+                    <h3>@language.subtimeuphead</h3>
+                </header>
+                <div class="modal-body">
+                    <p>
+                        @language.subtimeuptext<span id="mssgbxtime"></span>
+                        <br />
+                        <br />
+                        <b style="font-size: 18px; color: black;">@language.sautosubmitmessage</b>
+                        <br />
+                        <br />
+                        <span id="mssgbxtime2"></span>
+                        <br />
+                        <span style="color: red;">
+                            <label id="autoredtimer">5</label>
+                        </span><span id="mssgbxtime3"></span>
+                    </p>
+                </div>
+                <footer><a href="javascript:void(0);" onclick="engineupdate('1', '1', 'true', 'false', '0', '0', 'false','0');" class="" id="yes_confirm">@language.oklabel</a></footer>
+            </div>
+
+        </div>
+        <div class="popup_endtask">
+            <div id="codepopup1" class="modal-box">
+                <header>
+                    <a href="#" class="js-modal-close close">×</a>
+                    <h3>@language.subcodehead</h3>
+                </header>
+                <div class="modal-body">
+                    <p>
+                        @language.subcodetext
+                    </p>
+                </div>
+                <footer><a href="javascript:void(0);" onclick="engineupdate('1','1','true','false','0','0','true','0');" class="" id="yes_confirm">@language.subyes %></a> <a href="javascript:void(0);" class="js-modal-close" id="no_confirm">@language.subno</a> </footer>
+            </div>
+        </div>
+        <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+                <symbol id="icon-logo" viewBox="0 0 32 32">
+                    <title>logo</title>
+                    <path class="path1" d="M16 0.615c-8.497 0-15.385 6.888-15.385 15.385s6.887 15.385 15.385 15.385c8.496 0 15.385-6.887 15.385-15.385s-6.889-15.385-15.385-15.385zM6.693 20.004c-0.347 0-0.541-0.292-0.541-0.777s0.305-1.637 0.416-2.095l1.29-4.631c0.097-0.291 0.111-0.43 0.111-0.583 0-0.305-0.305-0.332-0.347-0.332-0.388-0.014-0.43 0-0.43-0.152 0-0.236 0.195-0.236 0.513-0.236 0.153 0 0.639-0.014 1.235-0.305 0.222-0.111 0.236-0.111 0.277-0.111s0.138 0.041 0.138 0.152c0 0.056 0 0.056-0.042 0.208l-1.553 5.714c-0.111 0.402-0.485 1.761-0.485 2.053 0 0.097 0.028 0.195 0.125 0.195 0.264 0 0.915-0.971 1.068-1.276 0.041-0.055 0.056-0.097 0.111-0.097s0.125 0.042 0.125 0.138c0 0.401-1.234 2.135-2.010 2.135zM16.163 20.004c-0.166 0-0.471-0.029-0.471-0.666 0-0.735 0.61-2.468 0.873-3.217 0.153-0.402 0.444-1.276 0.444-1.651 0-0.18-0.069-0.374-0.25-0.374-0.832 0-2.219 2.677-2.954 4.673l-0.236 0.638c-0.152 0.403-0.194 0.417-0.582 0.417-0.555 0-0.555-0.028-0.555-0.181 0-0.111 1.29-4.285 1.29-5.131 0-0.069-0.014-0.346-0.222-0.346-0.5 0-2.038 1.928-2.996 4.992-0.222 0.638-0.208 0.666-0.763 0.666-0.375 0-0.402 0.013-0.402-0.139 0-0.291 1.359-4.715 1.359-5.312 0-0.041 0.014-0.125-0.083-0.125-0.249 0-1.137 1.317-1.249 1.317-0.097 0-0.125-0.083-0.125-0.153 0-0.194 1.137-1.955 2.122-1.955 0.332 0 0.361 0.422 0.361 0.575 0 0.513-0.416 2.163-0.638 2.863h0.027l0.028-0.020c0.624-1.22 1.789-3.393 2.843-3.393 0.236 0 0.763 0.070 0.763 0.889 0 0.707-0.264 1.631-0.527 2.574l0.013 0.024c0.041-0.097 0.222-0.445 0.333-0.653 0.624-1.263 1.498-2.858 2.719-2.858 0.485 0 0.832 0.319 0.832 0.943 0 0.735-1.234 4.007-1.234 4.451 0 0.153 0.056 0.221 0.153 0.221 0.208 0 0.749-0.652 1.095-1.22 0.042-0.083 0.083-0.125 0.125-0.125 0.055 0 0.125 0.055 0.125 0.153-0.001 0.331-1.208 2.121-2.221 2.121zM23.374 19.99c-0.624 0-0.887-0.513-0.887-1.012 0-0.332 0.069-0.684 0.333-1.733h-0.014c-0.333 0.699-1.359 2.76-2.565 2.76-0.652 0-1.012-0.541-1.012-1.249 0-0.638 0.416-1.802 0.707-2.69 0.319-0.943 0.486-1.47 0.486-1.692 0-0.153-0.083-0.194-0.138-0.194-0.305 0-1.013 1.012-1.151 1.234-0.042 0.041-0.097 0.139-0.194 0.139-0.069 0-0.097-0.042-0.097-0.139 0-0.347 1.179-1.955 2.177-1.955 0.069 0 0.541 0 0.541 0.555 0 0.79-1.29 4.022-1.29 4.742 0 0.334 0.153 0.486 0.417 0.486 0.527 0 1.123-0.708 1.483-1.4 0.346-0.638 0.707-1.345 1.457-4.050 0.042-0.18 0.069-0.277 0.568-0.277 0.097 0 0.403 0 0.5 0.041 0.056 0.041 0.056 0.097 0.056 0.111s-0.139 0.486-0.32 1.137c-0.333 1.276-0.887 3.287-0.887 3.842 0 0.138-0.014 0.652 0.471 0.652 0.999 0 2.413-2.44 2.413-3.702 0-0.347-0.056-0.5-0.167-0.735-0.097-0.236-0.152-0.444-0.152-0.652 0-0.776 0.444-0.846 0.541-0.846 0.152 0 0.499 0.138 0.499 0.957-0 1.76-1.831 5.671-3.773 5.671z"></path>
+                </symbol>
+                <symbol id="icon-close" viewBox="0 0 357 357">
+                    <title>close</title>
+                    <polygon points="357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 178.5,214.2 321.3,357 357,321.3
+			214.2,178.5"></polygon>
+                </symbol>
+            </defs>
+        </svg>
+
+
+        <section class="fltLeft pad20 darkblue_bg">
+            <div class="container p_L24 p_R24">
+                <h1 class="fltLeft"> </h1>
+
+
+
+                <a href="javascript:void(0);" class="fltRight txtCenter btn m_R24 end_btn js-open-modal" data-modal-id="popup">@language.endtext %></a>
+
+                <div class="clear"></div>
+            </div>
+        </section>
+        <!-- End of Heading Section -->
+
+        <div id="noJs" style="min-height: 500px; z-index: 10000; position: relative; background: #000000;">
+
+            <div class="content-column no-margin">
+                <div class="full_width fltLeft bordr_btm d_Table">
+
+                    <div class="left_col  d_TableCell fltLeft width-100" style="min-height: 670px;">
+                        <h2>
+                            <!-- Section Name :  -->
+                            <span class="dark_grey_txt">@language.javaerrorhead</span>
+                        </h2>
+                        <br />
+                        <br />
+                        <br />
+                        <span style="color: red; font-size: 18px;">@language.javaerrortext </span>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+        <section class="fltLeft full_width">
+
+            <div id="maintable" style="display: none;" class="container box_shadow">
+                <div class="lightblue_bg fltLeft full_width">
+
+                    <h6 class="fltLeft full_width txt_white">@language.sectionshead</h6>
+
+
+                    <a class="toggle"><span class="toggle_img"></span></a>
+                    <div class="full_width nav_links" style="display: none;">
+                        <div class="content" id="desktop_view">
+                            <ul class="nav bxslider">
+
+
+                                <li class="dropdown click">
+
+
+
+                                    <a href="javascript:void(0)">
+                                        @*style="<%=active%>; cursor: not-allowed;"><%=section.varSectiontitle %>*@
+                                    </a>
+
+
+                                    <a href="javascript:void(0)" onclick="engineupdate('1','1','false','true','<%=Encrypt(i.ToString()).Trim()%>','0','false','0');" class="<%=activeclass %>" style="<%=active%>"><%=section.varSectiontitle %></a>
+
+
+                                    <a href="javascript:void(0)" /> @*style="<%=active%>; cursor: not-allowed;"><%=section.varSectiontitle %></a>*@
+
+                                    <a href="javascript:void(0)" /> @*style="<%=active%>; cursor: not-allowed;"><%=section.varSectiontitle %></a>*@
+
+
+
+                                    <div class="submenu">
+                                        @*style="<%=leftstyle %>;">*@
+                                        @*<h5><%=section.varSectiontitle %></h5>*@
+
+
+                                        <ul>
+                                            <li><span class="circle green_bg"></span><span class="circle_txt"><span id="ans-<%=i.ToString() %>"><%=section.varanswered %></span> - @language.spanans</span></li>
+                                                <li><span class="circle orange_bg"></span><span class="circle_txt"><span id="notans-<%=i.ToString() %>"><%=section.varnotanswered %></span> - @language.spannotans</span></li>
+                                                <li><span class="circle grey_bg"></span><span class="circle_txt"><span id="notvs-<%=i.ToString() %>"><%=section.varnotvisited %></span> - @language.spannotvisi </span></li>
+                                                <li><span class="circle green_bg"><span class="small_angle"></span></span><span class="circle_txt"><span id="markans-<%=i.ToString() %>"><%=section.varmarknans %></span> - @language.spanmarkans </span></li>
+                                                <li><span class="circle orange_bg"><span class="small_angle"></span></span><span class="circle_txt"><span id="markunans-<%=i.ToString() %>"><%=section.varmarknunans %></span> - @language.spanmarkunasn</span></li>
+                                                <li style="display: none;"><span class="circle active_bg"></span><span class="circle_txt"><span id="activeans-<%=i.ToString() %>">0</span> - @language.spancurrview</span></li>
+
+
+                                        </ul>
+
+                                        @*<strong><%=totqueshead %> : <%=section.varsectotques %> </strong>
+                                            <%
+                                            if (section.varsectime.ToString().Trim() == "00:00:00")
+                                            {
+                                            %>*@
+                                        <span style="box-sizing: border-box; float: left; font-family: robotobold; font-size: 14px; font-weight: 100; padding-bottom: 5px; padding-left: 64px; padding-right: 13px; width: auto;"><%=timeuphead %></span>
+
+                                        <span style="box-sizing: border-box; float: left; font-family: robotobold; font-size: 14px; font-weight: 100; padding-bottom: 5px; padding-left: 64px; padding-right: 13px; width: auto;"><%=seccomphead %></span>
+
+                                    </div>
+                                </li>
+                            </ul>
+                            <input type="hidden" id="totalsections" />
+                        </div>
+
+
+                        <div id="mobile_view">
+                            <div id="content-6" class="content">
+                                <ul class="nav">
+
+                                    <li class="dropdown click">
+                                        <a href="javascript:void(0);"></a> @*class="<%=activeclass %>"  style="<%=active%>"><%=section.varSectiontitle %></a>*@
+                                        <div class="submenu">
+
+
+                                            <ul>
+                                                @*<li><span class="circle green_bg"></span><span class="circle_txt"><span id="mans-<%=i.ToString() %>"><%=section.varanswered %></span> - <%=spanans %></span></li>
+                                                    <li><span class="circle orange_bg"></span><span class="circle_txt"><span id="mnotans-<%=i.ToString() %>"><%=section.varnotanswered %></span> - <%=spannotans %></span></li>
+                                                    <li><span class="circle grey_bg"></span><span class="circle_txt"><span id="mnotvs-<%=i.ToString() %>"><%=section.varnotvisited %></span> - <%=spannotvisi %></span></li>
+                                                    <li><span class="circle green_bg"><span class="small_angle"></span></span><span class="circle_txt"><span id="mmarkans-<%=i.ToString() %>"><%=section.varmarknans %></span> - <%=spanmarkans %></span></li>
+                                                    <li><span class="circle orange_bg"><span class="small_angle"></span></span><span class="circle_txt"><span id="mmarkunans-<%=i.ToString() %>"><%=section.varmarknunans %></span> - <%=spanmarkunasn %></span></li>
+                                                    <li style="display: none;"><span class="circle active_bg"></span><span class="circle_txt"><span id="mactiveans-<%=i.ToString() %>">0</span> - <%=spancurrview %></span></li>*@
+
+
+                                            </ul>
+
+                                            @*<strong><%=totqueshead %> : <%=section.varsectotques %> </strong>*@
+
+                                            <span style="box-sizing: border-box; float: left; font-family: robotobold; font-size: 14px; font-weight: 100; padding-bottom: 5px; padding-left: 64px; padding-right: 13px; width: auto;"></span>
+
+
+                                            <span style="box-sizing: border-box; float: left; font-family: robotobold; font-size: 14px; font-weight: 100; padding-bottom: 5px; padding-left: 64px; padding-right: 13px; width: auto;"></span>
+
+                                            <a href="javascript:void(0)" onclick="engineupdate('1','1','false','true','<%=Encrypt(i.ToString()).Trim()%>','0','false','0');" class="browse">Browse</a>
+
+
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <input type="hidden" id="mtotalsections" value="" />
+
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <input type="hidden" id="showslider" value="<%=showslider %>" />
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <!-- End of Navigation -->
+
+
+                <div class="content-column">
+                    <div class="full_width fltLeft bordr_btm d_Table">
+
+
+                        <div class="left_col1 dark_greybg d_TableCell fltLeft">
+                            <h2><span class="dark_grey_txt"></span></h2>
+
+                        </div>
+                        <div class="right_col1 pad12 d_TableCell fltLeft">
+                            <span class="small_txt txtCenter full_width fltLeft" style="font-size: 9px; height: 13px;"></span>
+                            <span class="big_txt txtCenter full_width fltLeft">
+                                <div id="timelabel" class="ui-widget-header"></div>
+                            </span>
+                        </div>
+                        <input type="hidden" id="timerendtype" value="<%=timertype %>" />
+                    </div>
+
+                    <!-- End of Section Name & Time -->
+
+                    <div id="anchor2" class="full_width fltLeft bordr_btm d_Table box_shadow">
+
+                        <div id="quesdivparent" class="left_col d_TableCell">
+                            <div id="inst1" class="full_width fltLeft h_scroll pos_rel instruction disp_none">
+                                @*<h4><%=insthead %> </h4>*@
+                                <a class='closeX'>
+                                    <img src='images/<%=instclose %>.png' alt='close' title='Close'>
+                                </a>
+                                <div id="Result"></div>
+                            </div>
+                            <div id="quesdivshow" class="full_width fltLeft h_scroll pos_rel questions ">
+
+
+                                <span id="compquestion" style="display: none;" class="red_txt">@language.compqueshead
+
+                                    <br />
+                                    <br />
+                                </span>
+
+                                <input type="hidden" id="markhdn" value="" />
+
+                                <div>
+                                    @*class="full_width fltLeft quest_div divques<%=res.varid%>" >*@
+                                    <h5>@language.slanques</h5>
+                                    @*<h5><%=slanques %> <%=varshono %> <%=ofh5 %> <%=stotques.ToString() %> </h5>*@
+
+
+
+
+                                    <p class="pad20">
+
+
+
+                                    </p>
+                                    <div class="full_width pad20 fltLeft opttable<%=res.varid %>">
+
+
+                                    </div>
+
+                                </div>
+                                <!-- End of Question 1 -->
+
+
+                                <span id="lastquesspan" class="red_txt bottom0"></span>
+
+
+                                <input type="hidden" id="totcurrshow" /> @*value="<%=qcount.ToString() %>" />*@
+                                <input type="hidden" id="totnewques" /> @*value="<%=totshowques.ToString() %>" />*@
+
+
+
+
+
+                            </div>
+                            <input type="hidden" id="totsecquestions"  />
+                            <!-- End of Question Area -->
+                            @*<input type="hidden" id="currid" name="currid" value="<%Response.Write(ViewState[" currid"].ToString()); %>" />
+                                <input type="hidden" id="currentsecid" name="currentsecid" value="<%Response.Write(ViewState[" currentsection"].ToString()); %>" />
+                                <input type="hidden" id="codepopup" value="<%=showcodepopup.ToString() %>" />
+                                <input type="hidden" id="endsec" value="<%=endsec.ToString() %>" />*@
+                            <div class="full_width fltLeft dark_greybg pad12 p_L24 p_R24 btnpanel">
+
+                                <a href="javascript:void(0)" style="" id="prev_btn" class="button grey_btn_bg fltLeft" onclick="engineupdate('1','2','false','false','0','0','false','0');">
+                                    <img alt="prev button" src="images/prev_arrow.png" class="prev_img">
+                                    &nbsp;@language.sprevious
+
+                                </a>
+                                <input type="hidden" id="prevbuttonstatus" value="show" />
+
+                                <input type="hidden" id="prevbuttonstatus" value="notshow" />
+
+
+                                <a href="javascript:void(0)" id="endtest_btn" style="display: none; margin-left: 10px;" class="button grey_btn_bg fltLeft" data-modal-id="endpopup">@language.endtext
+                                    <img alt="next butoon" src="images/next_arrow.png" class="next_img">
+                                </a>
+                                <a href="javascript:void(0)" id="next_btn" class="button grey_btn_bg fltLeft" onclick="engineupdate('1','1','false','false','0','0','false','0');">@language.ssnext
+                                    <img alt="next butoon" src="images/next_arrow.png" class="next_img">
+                                </a>
+                                <a href="javascript:void(0)" id="nextsec_btn" style="display: none;" class="button grey_btn_bg fltLeft" onclick="checkcodeassess('1','1','true','false','0','0','false','0');">@language.snextsec
+                                    <img alt="next butoon" src="images/next_arrow.png" class="next_img">
+                                </a>
+
+
+                                <a href="javascript:void(0)" class="button fltRight blue_btn_bg" id="markbtn" onclick="engineupdate('1','3','false','false','0','0','false','0');">@language.sreview </a>
+                                <a href="javascript:void(0)" class="button fltRight blue_btn_bg" id="unmarkbtn" style="display: none;" onclick="engineupdate('1','5','false','false','0','0','false','0');">@language.sunreview </a>
+
+                            </div>
+                            <!-- End of Buttons -->
+
+                            <div class="full_width fltLeft footer_greybg pad5 p_L24 p_R24">
+                                <div class="footer_btns fltRight">
+                                    <a href="javascript:void(0);" style="float: right;" class="small_button grey_btn_bg fltLeft m_Right inst_btnnew" onclick="getinst();">@language.instructionstext</a>
+
+
+
+                                    <a id="calculator-btn">
+                                        <span class="cal_img fltLeft">
+                                            <img src="images/calculator.png">
+                                        </span>
+                                        @language.calchead
+                                    </a>
+                                    <div style="display: none; background: linear-gradient(#9dd2ea, #8bceec);" class="calculator-block">
+
+                                        <div id="calculator">
+                                            <!-- Screen and clear key -->
+                                            <div class="top">
+                                                <span class="clear">C</span><img id="calcclose" alt="image" src="images/calcclose.png" style="width: 18px; height: 18px; float: right; cursor: pointer;" />
+                                                <div class="screen"></div>
+                                            </div>
+
+                                            <div class="keys">
+                                                <!-- operators and other keys -->
+                                                <span>7</span>
+                                                <span>8</span>
+                                                <span>9</span>
+                                                <span class="operator">+</span>
+                                                <span>4</span>
+                                                <span>5</span>
+                                                <span>6</span>
+                                                <span class="operator">-</span>
+                                                <span>1</span>
+                                                <span>2</span>
+                                                <span>3</span>
+                                                <span class="operator">÷</span>
+                                                <span>0</span>
+                                                <span>.</span>
+                                                <span class="eval">=</span>
+                                                <span class="operator">x</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End of left Section -->
+
+                        <div class="right_col d_TableCell">
+
+                            <h6 class="grey_hdng fltLeft"> </h6>
+
+
+                            <ul id="cal_ul" class="fxd_widthR fltLeft">
+
+
+
+
+                                @*<li id="qt<%=varshono %>" class="qtclass<%=res.varid%> <%=csscass%>"><span id="angleqt<%=varshono%>" class="angle angleqtclass<%=res.varid%>" style="display: <%=addspan%>;"></span><a href="javascript:void(0)" onclick="javascript:engineupdate('2','<%=res.varid %>','false','false','0','0','false','<%=varshono %>')"><%=varshono %> </a></li>*@
+
+
+                                <!-- End of Question Palette -->
+
+                            </ul>
+
+                            <h6 class="grey_hdng fltLeft"></h6>@*<%=legendhead %>: </h6>*@
+                            <ul id="legend_ul" class="fltLeft">
+                                @*<li><span class="circle green_bg"></span><span class="circle_txt"><%=spanans %></span></li>
+                                    <li><span class="circle orange_bg"></span><span class="circle_txt"><%=spannotans %></span></li>
+                                    <li><span class="circle grey_bg"></span><span class="circle_txt"><%=spannotvisi %></span></li>
+                                    <li><span class="circle green_bg"><span class="small_angle"></span></span><span class="circle_txt"><%=spanmarkans %></span></li>
+                                    <li><span class="circle orange_bg"><span class="small_angle"></span></span><span class="circle_txt"><%=spanmarkunasn %></span></li>*@
+                            </ul>
+
+
+
+                            <!-- End of Legend -->
+                        </div>
+
+                        <input type="hidden" id="revtype" value="true" />
+                        <input type="hidden" id="revtype" value="false" />
+
+                        <!-- End of Right Section -->
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+        </section>
+        <footer>
+            <div class="footer_bg fltLeft full_width">
+
+                <p class="txtCenter">
+
+                </p>
+            </div>
+        </footer>
+        <input type="hidden" id="hdnbackbuttonstore" name="hdnbackbuttonstore" value="0" />
+        <input type="hidden" id="_repostcheckcode" />
+        <input type="hidden" id="attemptid" />
+        <input type="hidden" id="unguid" />
+        <input type="hidden" id="secswitchuid" value="1" />
+
+
+
+        <input type="hidden" id="secautocomp1" value="" />
+        <input type="hidden" id="secautocomp2" value="" />
+
+        <input type="hidden" id="secnextcomp1" value="" />
+        <input type="hidden" id="secnextcomp2" value="" />
+
+        <input type="hidden" id="testcomp1" value="" />
+        <input type="hidden" id="testcomp2" value="" />
+        <input type="hidden" id="subresp1" value="" />
+        <input type="hidden" id="subresp2" value="" />
+        <input type="hidden" id="backbtnpress" value="" />
+
+        <div style="display: none;">
+            <div id="loadtimerem">
+            </div>
+            <div id="currenttime">
+            </div>
+        </div>
+        <input type="hidden" id="globalexamtype" value="ecdm" />
+        <div id="111" style="display: none;">
+        </div>
+        <label id="lblbsebjs"></label>
+
+
+    </form>
+
+</body>
+</html>
+
+

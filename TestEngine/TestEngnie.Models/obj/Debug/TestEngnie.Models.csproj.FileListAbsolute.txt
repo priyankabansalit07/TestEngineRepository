@@ -1,0 +1,65 @@
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\bin\ApplicationInsights.config
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\bin\roslyn\csc.exe
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\bin\roslyn\System.Collections.Immutable.dll
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\bin\roslyn\System.Reflection.Metadata.dll
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\bin\roslyn\vbc.exe
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\bin\roslyn\VBCSCompiler.exe
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\bin\roslyn\VBCSCompiler.exe.config
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\bin\TestEngnie.Models.dll.config
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\bin\TestEngnie.Models.dll
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\bin\TestEngnie.Models.pdb
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\bin\Microsoft.AI.DependencyCollector.dll
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\bin\Microsoft.AI.Web.dll
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\bin\Microsoft.AI.WindowsServer.dll
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\bin\Microsoft.ApplicationInsights.dll
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\bin\Microsoft.AI.DependencyCollector.xml
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\bin\Microsoft.AI.Web.xml
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\bin\Microsoft.AI.WindowsServer.xml
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\bin\Microsoft.ApplicationInsights.xml
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\obj\Debug\TestEngnie.Models.dll
+E:\Sukhvir\Projectworking\TestEngine\TestEngnie.Models\obj\Debug\TestEngnie.Models.pdb
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\bin\ApplicationInsights.config
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\bin\roslyn\csc.exe
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\bin\roslyn\System.Collections.Immutable.dll
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\bin\roslyn\System.Reflection.Metadata.dll
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\bin\roslyn\vbc.exe
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\bin\roslyn\VBCSCompiler.exe
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\bin\roslyn\VBCSCompiler.exe.config
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\bin\TestEngnie.Models.dll.config
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\bin\TestEngnie.Models.dll
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\bin\TestEngnie.Models.pdb
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\bin\Microsoft.AI.DependencyCollector.dll
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\bin\Microsoft.AI.Web.dll
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\bin\Microsoft.AI.WindowsServer.dll
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\bin\Microsoft.ApplicationInsights.dll
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\bin\Microsoft.AI.DependencyCollector.xml
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\bin\Microsoft.AI.Web.xml
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\bin\Microsoft.AI.WindowsServer.xml
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\bin\Microsoft.ApplicationInsights.xml
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\obj\Debug\TestEngnie.Models.dll
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\obj\Debug\TestEngnie.Models.pdb
+E:\Sukhvir TestEngine\TestEngine\TestEngnie.Models\obj\Debug\TestEngnie.Models.csprojResolveAssemblyReference.cache

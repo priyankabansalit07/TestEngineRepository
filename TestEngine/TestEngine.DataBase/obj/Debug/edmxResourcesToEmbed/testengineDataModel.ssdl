@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Demo_sukhvirModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="customexams">
+    <Key>
+      <PropertyRef Name="examid" />
+    </Key>
+    <Property Name="examid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="examname" Type="nvarchar" MaxLength="150" />
+    <Property Name="catid" Type="int" />
+    <Property Name="syllabus" Type="nvarchar" MaxLength="2000" />
+    <Property Name="prerequisites" Type="varchar" MaxLength="1000" />
+    <Property Name="partner" Type="varchar" MaxLength="10" />
+    <Property Name="price" Type="smallmoney" />
+    <Property Name="ibillproductid" Type="char" MaxLength="10" />
+    <Property Name="psproductid" Type="varchar" MaxLength="100" />
+    <Property Name="comments" Type="varchar" MaxLength="20" />
+    <Property Name="logo" Type="varchar" MaxLength="30" />
+    <Property Name="duration" Type="int" />
+    <Property Name="questioncount" Type="int" />
+    <Property Name="offline" Type="char" MaxLength="1" />
+    <Property Name="randomtest" Type="char" MaxLength="1" />
+    <Property Name="pagename" Type="varchar" MaxLength="100" />
+    <Property Name="usepage" Type="char" MaxLength="1" />
+    <Property Name="printname" Type="varchar" MaxLength="150" />
+    <Property Name="resultpage" Type="varchar" MaxLength="100" />
+    <Property Name="transcriptpage" Type="varchar" MaxLength="100" />
+    <Property Name="showcorporate" Type="char" MaxLength="1" />
+    <Property Name="courseware" Type="char" MaxLength="1" />
+    <Property Name="coursepath" Type="varchar" MaxLength="200" />
+    <Property Name="productId2CO" Type="varchar" MaxLength="50" />
+    <Property Name="priority" Type="int" />
+    <Property Name="positioning" Type="varchar" MaxLength="6" />
+    <Property Name="directions" Type="varchar" MaxLength="2000" />
+    <Property Name="haspassage" Type="char" MaxLength="10" />
+    <Property Name="passagenum" Type="int" />
+    <Property Name="positive" Type="int" />
+    <Property Name="odeskexam" Type="char" MaxLength="1" />
+    <Property Name="recertification" Type="char" MaxLength="1" />
+    <Property Name="isbeta" Type="char" MaxLength="1" />
+    <Property Name="uploaddate" Type="datetime" />
+    <Property Name="passingmarks" Type="int" />
+    <Property Name="examlanguage" Type="nvarchar" MaxLength="500" />
+    <Property Name="masterexamid" Type="int" />
+    <Property Name="refid" Type="int" />
+    <Property Name="refid1" Type="int" />
+    <Property Name="foreignexamid" Type="int" />
+    <Property Name="elmlxmlname" Type="varchar" MaxLength="500" />
+    <Property Name="isfn" Type="int" />
+    <Property Name="examenablepartners" Type="varchar(max)" />
+    <Property Name="commoncodelive" Type="bit" />
+    <Property Name="isCronbach" Type="bit" />
+    <Property Name="JobTitleID" Type="varchar(max)" />
+    <Property Name="masterXmlfile" Type="xml" />
+    <Property Name="SurCatPageUrl" Type="varchar" MaxLength="500" />
+    <Property Name="addedby" Type="int" />
+    <Property Name="isfreezed" Type="bit" />
+    <Property Name="isfrree" Type="bit" />
+    <Property Name="addedbytest" Type="int" />
+    <Property Name="flagged" Type="bit" />
+    <Property Name="flagerror" Type="varchar(max)" />
+    <Property Name="flagged1" Type="bit" />
+    <Property Name="showendbtn" Type="bit" />
+    <Property Name="idset" Type="text" />
+    <Property Name="isidset" Type="bit" />
+    <Property Name="languagetype" Type="int" />
+    <Property Name="languagetype1" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Demo_sukhvir.dbo.CustomSections' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CustomSections">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sectionname" Type="nvarchar" MaxLength="200" />
+    <Property Name="sectiondesc" Type="nvarchar" MaxLength="1000" />
+    <Property Name="examid" Type="int" />
+    <Property Name="sectionid" Type="int" />
+    <Property Name="active" Type="bit" />
+    <Property Name="type" Type="int" />
+    <Property Name="refid" Type="int" />
+    <Property Name="score" Type="int" />
+    <Property Name="refid1" Type="int" />
+    <Property Name="subtype" Type="int" />
+  </EntityType>
+  <EntityType Name="Customtopic">
+    <Key>
+      <PropertyRef Name="topicid" />
+    </Key>
+    <Property Name="topicid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="topicname" Type="nvarchar" MaxLength="500" />
+    <Property Name="topicdesc" Type="nvarchar" MaxLength="1000" />
+    <Property Name="examid" Type="int" />
+    <Property Name="sectionid" Type="int" />
+    <Property Name="active" Type="bit" />
+    <Property Name="refid" Type="int" />
+    <Property Name="scores" Type="float" />
+    <Property Name="refid1" Type="int" />
+    <Property Name="mastertopicid" Type="int" />
+    <Property Name="creationdate" Type="datetime" />
+    <Property Name="foreigntopicid" Type="int" />
+    <Property Name="marge" Type="bit" />
+    <Property Name="merge" Type="bit" />
+    <Property Name="customtopicdesc" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="employee">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="200" />
+    <Property Name="Remarks" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="ExceptionLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LogMessage" Type="varchar(max)" />
+    <Property Name="LogLineNumber" Type="varchar(max)" />
+    <Property Name="LogTime" Type="varchar(max)" />
+    <Property Name="StackTime" Type="varchar(max)" />
+    <Property Name="LogUrl" Type="varchar(max)" />
+  </EntityType>
+  <EntityContainer Name="Demo_sukhvirModelStoreContainer">
+    <EntitySet Name="customexams" EntityType="Self.customexams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customtopic" EntityType="Self.Customtopic" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="employee" EntityType="Self.employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ExceptionLog" EntityType="Self.ExceptionLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CustomSections" EntityType="Self.CustomSections" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CustomSections].[Id] AS [Id], 
+    [CustomSections].[sectionname] AS [sectionname], 
+    [CustomSections].[sectiondesc] AS [sectiondesc], 
+    [CustomSections].[examid] AS [examid], 
+    [CustomSections].[sectionid] AS [sectionid], 
+    [CustomSections].[active] AS [active], 
+    [CustomSections].[type] AS [type], 
+    [CustomSections].[refid] AS [refid], 
+    [CustomSections].[score] AS [score], 
+    [CustomSections].[refid1] AS [refid1], 
+    [CustomSections].[subtype] AS [subtype]
+    FROM [dbo].[CustomSections] AS [CustomSections]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
